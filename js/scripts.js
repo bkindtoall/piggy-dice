@@ -1,10 +1,19 @@
 //Buisness Logic For Dice Roll -----
-var player1= " ";
-var player2= " ";
+var player1= [];
+var player2= [];
+//var counter = 0;
 
 var roll = function(){
-  return Math.floor(6*Math.random())+1;
+  var randomNumber = Math.floor(6*Math.random());
+      //counter++;
+      return randomNumber;
+      console.log(roll);
 }
+
+var button = document.getElementById('start');
+
+
+
 
 //Buisness Logic For Player Options----
 function Players (turn){
@@ -47,17 +56,29 @@ Players.prototype.newgame= function (){
   this.totalscore = 0;
 }
 
-//User Interface that clears Values --
-var reset = function () {
-  $("#player1").val("");
-  $("#player2").val("");
-}
-
 
 //User Interface Logic --
 $(document).ready(function() {
-  $("#name").click(function(event) {
-    event.preventDefault();
 
- });
+  $("#start").click(function() {
+    console.log("clicked");
+    $("#start").html("<img src='img/face1.jpg'></img>");
+
+    console.log(start);
+  });
+
+  $("form#name").submit(function(event) {
+    event.preventDefault();
+    var inputtedPlayerOne =$("input#name1").val();
+  //  console.log(inputtedPlayerOne);
+    var inputtedPlayerTwo=$("input#name2").val();
+    $("#name1").val("");
+    $("#name2").val("");
+    $(".output1").text("Player 1: " + (inputtedPlayerOne));
+    $(".output2").text("Player 2: " + (inputtedPlayerTwo));
+  });
 });
+
+
+    // var playerNames = new Player (inputtedPlayerOne, inputtedPlayerTwo);
+    // console.log(player);
