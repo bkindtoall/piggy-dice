@@ -8,7 +8,7 @@ var roll = function(){
 
 //Buisness Logic For Player Options----
 function Players (turn){
-  this.playername;
+  this.playername = " ";
   this.roll = 0;
   this.tempscore = 0;
   this.totalscore = 0;
@@ -16,32 +16,48 @@ function Players (turn){
 }
 
 // Rolling a One----
-player.prototype.rollone = function (){
+Players.prototype.rollone = function (){
   if (this.roll === 1) {
     this.tempscore = 0
+    alert ("Sorry" + this.playername + "you rolled a One, Next Player turn")
+  } else {
+    this.tempscore += this.roll
   }
 }
 
+// Player Chooses to Hold --
+Players.prototype.hold = function (){
+  this.tempscore = this.totalscore;
+  this.totalscore = 0;
+  alert (this.playername + "Smart Choice!")
+}
+
+// Score 100 to win --
+Players.prototype.scoreboard = function (){
+  if (this.totalscore >= 100){
+    alert ("Congratulation,"+ this.playername + "Roasted Pig for Dinner!")
+  }
+}
+
+//New Game --
+Players.prototype.newgame= function (){
+  this.playername = " ";
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+}
+
+//User Interface that clears Values --
+var reset = function () {
+  $("#player1").val("");
+  $("#player2").val("");
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//User Interface Logic --
 $(document).ready(function() {
-  $("#name").submit(function(event) {
+  $("#name").click(function(event) {
     event.preventDefault();
-    var player1 = $("input#name1").val();
-    var player2 = $("input#name2").val();
-    $("input#name1").val("");
-   $("input#name2").val("");
+
  });
 });

@@ -26,31 +26,37 @@
         <form id="name">
         <div class="players">
           <label for="player1">player1:</label>
-          <input type="text"  class="form-control" id="name">
+          <input type="text"  class="form-control" id="name1">
           <br>
           <label for="player2">player2:</label>
           <input type="text"  class="form-control" id="name2">
           <br>
-          <button id="name" type="submit" class="btn btn-danger">Submit</button>
         </div>
         </form>
+            <button id="name" type="submit" class="btn btn-danger">Create Name</button>
 
         <!-- player1 -->
         <form id="player1">
           <label for="rplayer1-roll">Roll a Die or Hold</label>
           <button id="player1-roll" class="btn btn-danger">Roll</button>
           <button id="player1-hold" class="btn btn-success">hold</button>
-          <p id="round-total1">Current Round Score</p>
-          <p id="total-score1">Total Score</p>
+          <p id="round-total1">Current Round Score:</p>
+          <p id="total-score1">Total Score:</p>
         </form>
 
         <form id="player2">
           <label for="player1-roll">Roll a Die or Hold</label>
           <button id="player2-roll" class="btn btn-danger">Roll</button>
           <button id="player2-hold" class="btn btn-success">hold</button>
-          <p id="round-total2">Current Round Score</p>
-          <p id="total-score2">Total Score</p>
+          <p id="round-total2">Current Round Score:</p>
+          <p id="total-score2">Total Score:</p>
         </form>
+
+        <!-- Start Game -->
+        <button id="start" class="btn-info btn">Start</button>
+
+        <!-- Reset A Game -->
+        <button id="reset">Rematch</button>
 
 
       <p id="dice">
