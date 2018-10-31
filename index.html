@@ -9,24 +9,52 @@
   </head>
   <body>
     <img src="img/pig.gif" alt="pig">
-    <div class="container">
-      <form id=form>
+    <div class="jumbotron">
         <h1>Roll a Die</h1>
-        <h3>Game Play</h3>
-        <h4>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</h4>
+        <h2>Game Play</h2>
+        <h2>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</h2>
         <ul>
           <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
           <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
           <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
         </ul>
-        <h4>The first player to score 100 or more points wins.</h4>
-         <button id="player1" type="submit" class="btn btn-success">Player1!</button>
-         <button id="player2" type="submit" class="btn btn-success">Player2!</button>
-      </form>
+        <h2>The first player to score 100 or more points wins.</h2>
+        <h3>Please Insert Players name:</h3>
+    </div>
+
+        <!-- Players Name -->
+        <form id="name">
+        <div class="players">
+          <label for="player1">player1:</label>
+          <input type="text"  class="form-control" id="name">
+          <br>
+          <label for="player2">player2:</label>
+          <input type="text"  class="form-control" id="name2">
+          <br>
+          <button id="name" type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        </form>
+
+        <!-- player1 -->
+        <form id="player1">
+          <label for="rplayer1-roll">Roll a Die or Hold</label>
+          <button id="player1-roll" class="btn btn-danger">Roll</button>
+          <button id="player1-hold" class="btn btn-success">hold</button>
+          <p id="round-total1">Current Round Score</p>
+          <p id="total-score1">Total Score</p>
+        </form>
+
+        <form id="player2">
+          <label for="player1-roll">Roll a Die or Hold</label>
+          <button id="player2-roll" class="btn btn-danger">Roll</button>
+          <button id="player2-hold" class="btn btn-success">hold</button>
+          <p id="round-total2">Current Round Score</p>
+          <p id="total-score2">Total Score</p>
+        </form>
+
 
       <p id="dice">
 
       </p>
-    </div>
   </body>
 </html>
