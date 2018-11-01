@@ -1,34 +1,14 @@
-/*#player1 {
-  border: none;
-  padding: 10px;
-  width: 200px;
-  cursor: pointer;
-  position: absolute;
-  left : 10%;
-  top:100%;
+
+.output1 {
+  font-size: 24px;
+  font-variant-caps: petite-caps;
+  text-decoration: underline;
 }
-#player2 {
-  border: none;
-  width: 200px;
-  cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  left: 40%;
-  top:100%;*/
+.output2 {
+  font-size: 24px;
+  font-variant-caps: petite-caps;
+  text-decoration: underline;
 }
-#dice {
-  height: 200px;
-  width: 200px;
-  padding: 20px;
-  margin: 20px auto;
-  border: 1px solid gray;
-  border-radius: 10px;
-  font-size:80px;
-}
-/*#name{
-  height: 40%;
-  width: 40%;
-}*/
 
 .container {
   display: none;
@@ -36,4 +16,9 @@
 
 .playerInfo {
   display: none;
+}
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;
 }
