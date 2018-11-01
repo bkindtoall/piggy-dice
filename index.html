@@ -38,6 +38,10 @@
         </div>
       </div>
       <button type="submit" class="btn btn-danger">Create Name</button>
+
+        <div class="output1"></div>
+        <div class="output2"></div>
+
     </form>
 
   </div>
@@ -53,10 +57,6 @@
           <button type="button" id="diceRoller1" class="btn btn-danger">Roll</button><br>
             <h6 id="diceResult1"></h6>
           <button id="player1-hold" class="btn btn-success">hold</button>
-          <div ="output">
-          <p id="round-total1">Current Round Score:</p>
-          <p id="total-score1">Total Score:</p>
-          </div>
         </form>
       </div>
     </div>
@@ -69,8 +69,15 @@
           <button type="button" id="diceRoller2" class="btn btn-danger">Roll</button><br>
             <h6 id="diceResult2"></h6>
           <button id="player2-hold" class="btn btn-success">hold</button>
-          <p id="round-total2">Current Round Score:</p>
-          <p id="total-score2">Total Score:</p>
+      <div class="row">
+        <div class="col-md-6">
+
+          <form id="players">
+            <p id="round-total1"></p>
+            <p id="round-total2"></p>
+            <p id="player1RunningScore">Total Score:</p>
+            <p id="player2RunningScore">Total Score:</p>
+
         </form>
       </div>
     </div>
@@ -79,7 +86,10 @@
 
     <!-- Reset A Game -->
     <button id="reset">Rematch</button>
+    </div>
   </div>
+</div>
+
 
 
 
