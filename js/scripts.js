@@ -10,7 +10,17 @@ var roll = function(){
       console.log(roll);
 }
 
-var button = document.getElementById('start');
+var diceResult1 = function(num) {
+  var dice = Math.floor(Math.random() * num) +1;
+  return dice;
+}
+
+var diceResult2 = function(num) {
+  var dice = Math.floor(Math.random() * num) +1;
+  return dice;
+}
+
+
 
 
 
@@ -60,13 +70,23 @@ Players.prototype.newgame= function (){
 //User Interface Logic --
 $(document).ready(function() {
 
-  $("#start").click(function() {
-    console.log("clicked");
-    $("#start").html("<img src='img/face1.jpg'></img>");
+  //Dice Roller 1 ---
+  $("#diceRoller1").click(function() {
+     var diceRoll1 = diceResult1(6);
+     $("#diceResult1").html("<img src='img/" +diceRoll1 + ".jpg'>");
+    });
 
-    console.log(start);
+//Dice Roller 1 ---
+    $("#diceRoller2").click(function() {
+       var diceRoll2= diceResult2(6);
+       $("#diceResult2").html("<img src='img/" +diceRoll2 + ".jpg'>" + diceRoll2);
+      });
+
+
+
+
   });
-
+//input name --
   $("form#name").submit(function(event) {
     event.preventDefault();
     var inputtedPlayerOne =$("input#name1").val();
@@ -77,7 +97,10 @@ $(document).ready(function() {
     $(".output1").text("Player 1: " + (inputtedPlayerOne));
     $(".output2").text("Player 2: " + (inputtedPlayerTwo));
   });
-});
+
+
+
+
 
 
     // var playerNames = new Player (inputtedPlayerOne, inputtedPlayerTwo);
