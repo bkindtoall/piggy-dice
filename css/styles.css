@@ -31,5 +31,9 @@
 }*/
 
 .container {
-  
+  display: none;
+}
+
+#playerInfo {
+  display: none;
 }

@@ -87,11 +87,15 @@ $(document).ready(function() {
         var inputtedPlayerOne =$("input#name1").val();
       //  console.log(inputtedPlayerOne);
         var inputtedPlayerTwo=$("input#name2").val();
-        // $("#name1").val("");
-        // $("#name2").val("");
+        $("#name1").val("");
+        $("#name2").val("");
         console.log(name1);
-        $(".output1").text("Player 1: " + (inputtedPlayerOne));
-        $(".output2").text("Player 2: " + (inputtedPlayerTwo));
+        $(".output1").text(inputtedPlayerOne);
+        $(".output2").text(inputtedPlayerTwo);
+        $("#playerInfo").show();
+        $(".players").hide();
+        $(".container").show();
+
       });
 
   });
