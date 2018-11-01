@@ -38,49 +38,42 @@
           <button type="submit" class="btn btn-danger">Create Name</button>
         </div>
       </div>
-      <div id="playerInfo">
-
-        <span class="output1"></span>
-        <span class="output2"></span>
-      </div>
-
     </form>
 
   </div>
 
-  <hr>
   <!-- players -->
   <div class="container">
     <div class="row">
       <div class="col-md-6">
         <form id="player1">
-          <label for="player1-roll">Roll a Die or Hold</label>
+          <div class="playerInfo">
+            <span class="output1"></span>
+          </div>
+          <!-- <label for="player1-roll">Roll a Die or Hold</label> -->
           <br>
           <button type="button" id="diceRoller1" class="btn btn-danger">Roll</button><br>
             <h6 id="diceResult1"></h6>
           <button id="player1-hold" class="btn btn-success">hold</button>
+          <p id="round-total1"></p>
+          <p id="player1RunningScore">Total Score:</p>
         </form>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-
+    <hr>
         <form id="player2">
-          <label for="player2-roll">Roll a Die or Hold</label>
+          <div class="playerInfo">
+            <span class="output2"></span>
+          </div>
+          <!-- <label for="player2-roll">Roll a Die or Hold</label> -->
           <br>
           <button type="button" id="diceRoller2" class="btn btn-danger">Roll</button><br>
             <h6 id="diceResult2"></h6>
           <button id="player2-hold" class="btn btn-success">hold</button>
-      <div class="row">
-        <div class="col-md-6">
-
-          <form id="players">
-            <p id="round-total1"></p>
-            <p id="round-total2"></p>
-            <p id="player1RunningScore">Total Score:</p>
-            <p id="player2RunningScore">Total Score:</p>
-
-        </form>
+          <p id="round-total2"></p>
+          <p id="player2RunningScore">Total Score:</p>
       </div>
     </div>
 
